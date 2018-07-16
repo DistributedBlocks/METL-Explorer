@@ -1,0 +1,41 @@
+@import '../../../../assets/scss/_variables.scss';
+
+$img-height-big: 68px;
+$img-height-small: 32px;
+
+nav {
+  background-color: white;
+  margin-bottom: 80px;
+  margin-top: 20px;
+
+  img {
+    cursor: pointer;
+    height: $img-height-big;
+  }
+
+  .-back-link {
+    color: $primary;
+    float: right;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: $img-height-big;
+  }
+
+  @media (max-width: $max-xxs-width) {
+    img {
+      height: $img-height-small;
+    }
+    .-back-link {
+      line-height: $img-height-small;
+    }
+    .-back-to {
+      display: none;
+    }
+  }
+
+  @media (max-width: $max-xs-width) {
+    & {
+      margin-bottom: 20px;
+    }
+  }
+}

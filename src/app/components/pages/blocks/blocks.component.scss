@@ -1,0 +1,74 @@
+@import '../../../../assets/scss/_variables.scss';
+
+.-details {
+  text-align: right;
+
+  @media (max-width: $max-xs-width) {
+    & {
+      text-align: left;
+    }
+  }
+
+  p {
+    font-size: $siz-normal-text;
+    line-height: 14px;
+    padding: 3px 0;
+    margin-bottom: 5px;
+
+    >span:first-child {
+      display: inline-block;
+    }
+
+    .-label {
+      display: block;
+      opacity: $transparent;
+      float: left;
+    }
+
+    .-link {
+      color: $primary;
+      display: inline-block;
+      cursor: pointer;
+    }
+
+    .-value {
+      display: inline-block;
+      width: 100px;
+    }
+  }
+}
+
+.pagination {
+  margin-top: $siz-big-margin;
+  text-align: right;
+  font-size: $siz-normal-text;
+
+  a {
+    background-color: $col-soft-background;
+    border: 1px solid $col-normal-separator;
+    cursor: pointer;
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    min-width: 30px;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+
+    &.disabled {
+      background-color: $col-soft-background;
+      color: #cdcdcd;
+      cursor: not-allowed;
+    }
+  }
+
+  @media (max-width: $max-xs-width) {
+    .-hide-xs {
+      display: none;
+    }
+  }
+}
